@@ -1,6 +1,11 @@
 server:
   port: 9090
 
+jwtSecret: meetingRoomApplicationSecretKey
+jwtExpirationMs: 86400000
+refreshExpirationMs: 2000000000
+
+
 ---
 spring:
   config:
@@ -65,3 +70,7 @@ management:
         "[http.server.requests]": true
 
 ---
+---
+
+fcm:
+  service-account-key-file: ./src/main/resources/fcmServiceAccountKey.json
